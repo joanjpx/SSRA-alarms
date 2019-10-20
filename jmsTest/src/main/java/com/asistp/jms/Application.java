@@ -14,6 +14,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 import com.asistp.model.Alarms;
+import com.asistp.model.AlarmsDao;
 
 public class Application {
 	private static final Logger loggerExceptions = LogManager.getLogger("Exceptions");
@@ -113,6 +114,7 @@ public class Application {
 			// "------" + alarm.getElementIp()+ "++++" +
 			// alarm.getIpOrigin()+"-->"+alarm.getSeverity());
 			System.out.println("Valor AffectObbjectDisplayName ->"+alarm.getAffectedObejectDisplayName());
+			AlarmsDao.writeAlarmsJmsFileforDay(response);
 			if(alarm.getAffectedObejectDisplayName().substring(0,4).equals("Port")) {
 			alarm.persist(path,pathFileConfg);
 			}

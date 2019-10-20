@@ -653,5 +653,20 @@ public class AlarmsDao extends MYSQLConnect {
 			}
 
 		}
+	 
+		public static void writeAlarmsJmsFileforDay(String response) {
+			 SimpleDateFormat sdf = new SimpleDateFormat("ddMM");
+			 String toDay = sdf.format(new Date());
+			 FileWriter fw=null;
+			 try {
+				 fw=new FileWriter("JMSNOKIA_"+toDay,true);
+				 fw.write(response+System.getProperty("line.separator"));
+				 fw.close();
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+				
+			}
 
 }
