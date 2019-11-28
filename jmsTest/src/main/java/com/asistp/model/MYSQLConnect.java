@@ -17,8 +17,8 @@ public class MYSQLConnect {
     private Connection conexion = null;
     private String servidor = "10.255.42.123";
     private String database = "gilatsmrt";
-    private String usuario = "root";
-    private String password = "123456*abc";
+    private String usuario = "fitel_userbd";
+    private String password = "bdg1lat";
     public String pathFileConfig = "";
 
     public Connection getConexion(String conectionType) throws ClassNotFoundException, SQLException {
