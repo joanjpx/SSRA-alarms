@@ -211,7 +211,7 @@ public class Alarms {
 			daoModel.pathFileConfig = pathFileConfig;
 			daoModel.setModel_Alarms_Translator(this);
 			daoModel.insetAlarms(this);
-			daoModel.insetAlarmsOtherServer(this);
+			//daoModel.insetAlarmsOtherServer(this);
 			try {
 				String tablename=daoModel.createTableMensual();
 				long id=daoModel.getId(this.additionalInformation,this.getNbi_sys() );
